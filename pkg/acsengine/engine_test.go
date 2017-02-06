@@ -159,7 +159,8 @@ func IterateTestFilesDirectory(directory string, APIModelTestFiles *[]APIModelTe
 				return e
 			}
 		} else {
-			if !strings.Contains(file.Name(), "_expected") {
+			// Skip files like .DS_Store
+			if !strings.Contains(file.Name(), "_expected") && !strings.HasPrefix(file.Name(), ".") {
 				tuple := &APIModelTestFile{}
 				tuple.APIModelFilename = filepath.Join(directory, file.Name())
 				if _, ferr := os.Stat(tuple.GetExpectedArmTemplateFilename()); os.IsNotExist(ferr) {

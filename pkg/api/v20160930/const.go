@@ -10,7 +10,8 @@ const (
 	// Mesos is the string constant for the Mesos orchestrator type
 	Mesos OrchestratorType = "Mesos"
 	// DCOS is the string constant for DCOS orchestrator type and defaults to DCOS187
-	DCOS = "DCOS"
+	DCOS    = "DCOS"
+	DCOS187 = "DCOS187"
 	// Swarm is the string constant for the Swarm orchestrator type
 	Swarm = "Swarm"
 	// Kubernetes is the string constant for the Kubernetes orchestrator type

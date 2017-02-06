@@ -10,6 +10,7 @@ import (
 func (o *OrchestratorProfile) Validate() error {
 	switch o.OrchestratorType {
 	case DCOS:
+	case DCOS187:
 	case Mesos:
 	case Swarm:
 	case Kubernetes:
